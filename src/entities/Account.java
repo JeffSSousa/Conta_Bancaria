@@ -5,14 +5,12 @@ public class Account {
 	private String holder;
 	private Double balance;
 
-	public Account() {
-	}
+	
 
-	public Account(Integer number, String holder, Double balance) {
-		super();
+	public Account(Integer number, String holder) {
 		this.number = number;
 		this.holder = holder;
-		this.balance = balance;
+		balance = 0.0 ;
 	}
 
 	public Integer getNumber() {
@@ -44,5 +42,4 @@ public class Account {
 	    balance -= amount + 5.0;
 	}
 	
-
 }
