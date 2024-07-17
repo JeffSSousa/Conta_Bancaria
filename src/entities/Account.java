@@ -5,8 +5,6 @@ public class Account {
 	private String holder;
 	private Double balance = 0.0;
 
-	
-	
 	public Account() {
 	}
 
@@ -50,9 +48,7 @@ public class Account {
 	}
 
 	public String toString() {
-		return "Account " + number
-				+ ", Holder: " + holder
-				+ String.format(", Balance : $ %.2f", balance);
+		return "Account " + number + ", Holder: " + holder + String.format(", Balance : $ %.2f", balance);
 	}
 
 }
