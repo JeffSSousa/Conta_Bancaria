@@ -43,14 +43,14 @@ public class Account {
 
 	public void deposit(double amount) throws DomainException {
 		if (amount <= 0) {
-			throw new DomainException("O valor não pode ser menor que 0");
+			throw new DomainException("Value entered is invalid, You must enter values ​​above $ 0.00");
 		}
 		balance += amount;
 	}
 
 	public void withdraw(double amount) throws DomainException {
 		if (balance < (amount + 5.0)) {
-			throw new DomainException("Valor Insuficiente na conta");
+			throw new DomainException( String.format("Insufficient amount in the account to carry out this operation\nAvailable Value: $ %.2f" , (amount - 5.0)));
 		}
 		balance -= amount + 5.0;
 	}

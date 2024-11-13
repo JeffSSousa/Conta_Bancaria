@@ -1,5 +1,6 @@
 package application;
 
+import java.util.InputMismatchException;
 import java.util.Locale;
 import java.util.Scanner;
 
@@ -53,11 +54,14 @@ public class Program {
 		}
 
 		catch (DomainException e) {
-			System.out.println("Error em operação: " + e.getMessage());
+			System.out.println("Operation error: " + e.getMessage());
 		}
 		
-		
+		catch (InputMismatchException e) {
+			   System.out.println("Scanning process failed: Check what is wrong and try again");
+		}
 
+		
 	}
 
 }
