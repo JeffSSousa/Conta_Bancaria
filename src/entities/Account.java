@@ -50,7 +50,9 @@ public class Account {
 
 	public void withdraw(double amount) throws DomainException {
 		if (balance < (amount + 5.0)) {
-			throw new DomainException( String.format("Insufficient amount in the account to carry out this operation\nAvailable Value: $ %.2f" , (amount - 5.0)));
+			throw new DomainException(String.format(
+					"Insufficient amount in the account to carry out this operation\nAvailable Value: $ %.2f",
+					(amount - 5.0)));
 		}
 		balance -= amount + 5.0;
 	}
