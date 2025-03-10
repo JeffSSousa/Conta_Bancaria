@@ -1,10 +1,19 @@
+# Ignorar arquivos compilados Java
 *.class
 *.jar
 *.war
 *.ear
 
+
+# Ignorar pastas de build
 /bin/
 /target/
 
+# Ignorar arquivos do IntelliJ IDEA e VS Code
 /.idea/
 /.vscode/
+
+# Ignorar pastas indesejadas do eclipse ou arquivos
+.classpath
+.project
+.settings/
